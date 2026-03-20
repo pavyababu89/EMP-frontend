@@ -14,6 +14,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
+    localStorage.clear(); 
 
     try {
       // Step 1 — Get JWT tokens
