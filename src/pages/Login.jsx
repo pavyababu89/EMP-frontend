@@ -30,9 +30,9 @@ const Login = () => {
       const userId = payload.user_id;
 
       // Step 4 — Get user role from Django
-      const profileRes = await fetch('http://127.0.0.1:8000/api/employees/me/', {
-        headers: { Authorization: `Bearer ${access}` }
-      });
+      const profileRes = await fetch(`${import.meta.env.VITE_API_URL}/employees/me/`, {
+      headers: { Authorization: `Bearer ${access}` }
+});
       const profileData = await profileRes.json();
       const role = profileData.role;
 
